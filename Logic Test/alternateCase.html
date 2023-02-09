@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var alternateCase = function (s) {
+  var chars = s.toUpperCase().split("");
+  return chars.join("");
+};
+
+var up = "abc";
+console.log(alternateCase(up));
+    </script>
+    <script>
+        var alternateCase = function (s) {
+  var chars = s.toLowerCase().split("");
+  return chars.join("");
+};
+
+var low = "ABC";
+console.log(alternateCase(low));
+    </script>
+    <script>
+        String.prototype.toAlternatingCase = function(){
+            return this.split('')
+            .map(Letter => Letter === Letter.toUpperCase() ? Letter.toLocaleLowerCase() : Letter.toUpperCase())
+            .join('');
+        }
+        console.log('Hello World'.toAlternatingCase());
+    </script>
+</body>
+
+</html>
